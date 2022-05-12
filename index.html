@@ -1,32 +1,40 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="html, publicidad, servicios web, redes sociales, testimonios, proyectos reales">
+    <meta name="description" content="Somos una agencia de marketing online orientada a objetivos, especializada en Google Ads. Estamos certificados y asociados a Google Partners." >
+    <meta name="author" content="elisa diseño">
+    <meta name="lenguage" content="spanish">
     <link rel="stylesheet" href="css/estilo.css" />
     <script src="https://kit.fontawesome.com/5263882621.js" crossorigin="anonymous"></script>
-    <title>Elisa Design.</title>
+
+    <title>Elisa Design. Publicidad Digital, Diseño y Desarrollo</title>
 </head>
 
 <body>
-    <header class="hero">
-        <nav class="nav__hero">
-            <div class="container nav__container">
-                <div class="logo">
-                    <h2 class="logo__name">Elisa Design<span class="point">.</span></h2>
-                </div>
-                <div class="links">
-                    <a href="#" class="link">Inicio</a>
-                    <a href="#services" class="link">Servicios</a>
-                    <a href="#proyectos" class="link">Proyectos</a>
-                    <a href="#clientes" class="link">Clientes</a>
-                    <a href="#contacto" class="link link--active">Contacto</a>
-                </div>
+    <section class="header-barra">
+        <div class="contenedorHeader">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="Agencia de Publicidad"></a>
             </div>
-        </nav>
+            <div class="boton">
+                <label for="btn-menu"><i class="fa-solid fa-bars"></i></label>
+            </div>
+            <input type="checkbox" id="btn-menu">
+            <nav class="menu">
+                <a href="#services">Servicios</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#clientes">Clientes</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </section>
 
+    <header class="hero">
         <section class="container hero__main">
             <div class="hero__textos">
                 <h1 class="title">
@@ -177,8 +185,9 @@
                 </div>
             </div>
         </section>
-
+        <!--extends - Inicio-->
         <section id="contacto" class="email container container--modifier">
+
             <h2 class="subtitle subtitle--modifier">Somos tu mejor opción para adoptar la transformación digital<span
                     class="point">.</span></h2>
 
@@ -214,6 +223,7 @@
                 <input type="submit" class="newsletter__submit" value="Comienza hoy">
             </form>
         </section>
+        <!--extends - Fin-->
     </main>
 
     <footer class="footer">
@@ -279,6 +289,7 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
     <a href="#" class="subir"><i class="fa-solid fa-circle-up"></i></a>
+
 </body>
 
 </html>
