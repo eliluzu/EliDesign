@@ -45,6 +45,10 @@ html {
 /* Use selector especial  */
 .logo {
   float: left;
+  text-align: left;
+  font-size: 60px;
+  font-weight: bold;
+  color: var(--gold1);
 }
 
 .logo:hover {
@@ -62,15 +66,16 @@ html {
 .menu {
   float: right;
   line-height: 75px;
+  text-transform: uppercase;
 }
 
 .menu a {
-  color: var(--black2);
+  color: var(--gold1);
   text-decoration: none;
   display: inline-block;
   padding: 10px 15px;
   line-height: normal;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -94,9 +99,9 @@ html {
 }
 
 .boton label {
-  color: #004aad;
+  color: var(--gold1);
   padding: 5px;
-  font-size: 14px;
+  font-size: 16px;
   border-radius: 3px;
   cursor: pointer;
 }
@@ -109,17 +114,17 @@ html {
 
   .logo,
   .boton {
-    line-height: 60px;
+    line-height: 50px;
   }
 
-  .logo .img {
+  .logo {
     height: auto;
     max-width: 100%;
   }
 
   .menu {
     position: absolute;
-    background-color: #fff;
+    background: linear-gradient(180deg, var(--black2) 0%, var(--black1) 100%);
     width: 100%;
     height: auto;
     top: 90px;
@@ -297,14 +302,15 @@ html {
 
 /* Galeria Servicios */
 
-h1{
-font-weight: 400;
-text-align: center;
-padding: 20 0;
-font-size: 40px;
+h1 {
+  font-weight: bold;
+  text-align: left;
+  padding: 20 0;
+  font-size: 40px;
+  color: var(--black2);
 }
 
-.linea{
+.linea {
   background: var(--black1);
   height: 5px;
   width: 100%;
@@ -321,14 +327,14 @@ font-size: 40px;
   overflow: hidden;
 }
 
-.galeria > a{
+.galeria>a {
   display: block;
   position: relative;
   overflow: hidden;
   box-shadow: 0 0 6px rgba(0, 0, 0, .5);
 }
 
-.galeria img{
+.galeria img {
   width: 100%;
   vertical-align: top;
   height: 250px;
@@ -336,16 +342,168 @@ font-size: 40px;
   transition: transform 0.5s;
 }
 
-.galeria a:hover img{
+.galeria a:hover img {
   filter: blur(2px);
   transform: rotate(10deg) scale(1.3);
 }
 
+.light-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .5);
+  transition: transform .3s ease-in-out;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+}
 
+.light-box img {
+  width: 50vw;
+  max-height: 70vh;
+}
+
+.light-box:target {
+  transform: scale(1);
+}
+
+.close {
+  display: block;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  background: var(--gold1);
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 40px;
+  border-radius: 50%;
+}
+
+.next {
+  display: block;
+  background: var(--gold1);
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-decoration: none;
+  text-align: center;
+}
+
+@media screen and (max-width:400px) {
+  .galeria {
+    grid-template-columns: repeat(auto-fit, minmax(200px 1fr));
+  }
+
+  .close {
+    top: 20px;
+    right: 20px;
+  }
+}
 
 /* Fin de Galeria Servicios  */
 
 /* Servicios  */
+.tarjeta__container {
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 100px;
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.papa__tarjeta {
+  margin: 20px;
+  perspective: 1000px;
+}
+
+.papa__tarjeta:hover .tarjeta{
+  transform: rotateY(180deg);
+
+}
+
+.tarjeta {
+  width: 350px;
+  height: 400px;
+  position: relative;
+  transform-style: preserve-3d ;
+  transition: all 600ms;
+}
+.frente__tarjeta{
+  background-size: cover;
+  background-position: center;
+}
+.frente__tarjeta,
+.dorso__tarjeta {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  border-radius: 20px;
+}
+
+.dorso__tarjeta{
+  transform: rotateY(180deg);
+  background: #fff;
+}
+
+.cuerpo__tarjeta_frente{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  transform: translateZ(60px);
+}
+
+.bg{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+}
+.cuerpo__tarjeta_dorso{
+  padding: 40px;
+  text-align: center;
+  transform: translateZ(60px);
+}
+.cuerpo__tarjeta_dorso p{
+margin-top: 30px;
+font-size: 18px;
+}
+.cuerpo__tarjeta_dorso input{
+padding: 10px 40px;
+margin-top: 30px;
+font-size: 16px;
+cursor: pointer;
+border: none;
+color: #fff;
+background: #5880f6;
+box-shadow: 1px 1px 30px -5px  #5880f6;
+border-radius: 10px;
+transition: box-shadow 600ms;
+}
+.cuerpo__tarjeta_dorso input:hover{
+  box-shadow: 1px 1px 30px -5px  #449de6;
+}
 .services {
   background: #fafafa;
 }
@@ -505,107 +663,83 @@ font-size: 40px;
 }
 
 /* Testimony  */
+
 .testimony {
   background: #fafafa;
 }
 
-.testimony .testimony-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.testimony-container {
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.testimony .testimony-container .testimony__card {
+.testimony__card {
   width: 30%;
   height: 500px;
-  background: -webkit-gradient(linear,
-      left top,
-      left bottom,
-      from(var(--black2)),
-      to(var(--black1)));
   background: linear-gradient(180deg, var(--black2) 0%, var(--black1) 100%);
   border-radius: 10px;
   position: relative;
   margin-bottom: 30px;
 }
 
-.testimony .testimony-container .testimony__card .testimony__img {
+.testimony__img {
   width: 100%;
   height: 100%;
   border-radius: inherit;
-  -o-object-fit: cover;
   object-fit: cover;
-  -o-object-position: center top;
   object-position: center top;
 }
 
-.testimony .testimony-container .testimony__card .testimony__img .testimony__copy {
+.testimony__copy {
   position: absolute;
   bottom: 20px;
   left: 5%;
   width: 90%;
-  background: -webkit-gradient(linear,
-      left top,
-      left bottom,
-      from(var(--black2)),
-      to(var(--black1)));
   background: linear-gradient(180deg, var(--black2) 0%, var(--black1) 100%);
   color: #fff;
   margin: 0 auto;
   border-radius: 10px;
-  -webkit-box-shadow: var(--shadow) var(--color_shadow);
   box-shadow: var(--shadow) var(--color_shadow);
   padding: 15px 8px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
-.testimony .testimony-container .testimony__card .testimony__img .testimony__copy .testimony__copy--modifier {
+.testimony__copy--modifier {
   background: none;
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
-.testimony .testimony-container .testimony__card .testimony__img .testimony__copy .testimony__copy--modifier .testimony__logo {
+.testimony__logo {
   font-size: 40px;
   margin-right: 15px;
   display: inline-block;
 }
 
-.testimony .testimony-container .testimony__card .testimony__img .testimony__copy .testimony__copy--modifier .testimony__logo .testimony__name {
+.testimony__name {
   font-size: 24px;
   line-height: 28px;
 }
 
-.testimony .testimony-container .testimony__card .testimony__img .testimony__copy .testimony__copy--modifier .testimony__logo .testimony__name .testimony__position {
+.testimony__position {
   color: var(--gray);
 }
 
-.testimony .testimony-container .testimony__card .testimony__img .testimony__copy .testimony__copy--modifier .testimony__logo .testimony__name .testimony__position .testimony__text {
+.testimony__text {
   padding: 40px 0;
   width: 90%;
   margin: 0 auto;
   color: #fff;
 }
 
-.testimony .testimony-container .testimony__card .testimony__img .testimony__copy .testimony__copy--modifier .testimony__logo .testimony__name .testimony__position .testimony__text .testimony__history {
+.testimony__history {
   font-size: 21px;
   font-weight: 300;
 }
 
-.testimony .testimony-container .testimony__card .testimony__img .testimony__copy .testimony__copy--modifier .testimony__logo .testimony__name .testimony__position .testimony__text .testimony__info {
+.testimony__info {
   width: 70%;
 }
 
@@ -616,14 +750,13 @@ font-size: 40px;
 .logo--picture {
   width: 40px;
   height: 40px;
-  -o-object-fit: cover;
   object-fit: cover;
   border-radius: 50%;
-  -o-object-position: center top;
   object-position: center top;
 }
 
 /* Fin de Testimony  */
+
 
 /* check */
 .check {

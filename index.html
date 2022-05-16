@@ -17,32 +17,34 @@
 </head>
 
 <body>
-    <section class="header-barra">
-        <div class="contenedorHeader">
-            <div class="logo">
-                <a href="index.html"><img src="img/logo.png" alt="Agencia de Publicidad"></a>
-            </div>
-            <div class="boton">
-                <label for="btn-menu"><i class="fa-solid fa-bars"></i></label>
-            </div>
-            <input type="checkbox" id="btn-menu">
-            <nav class="menu">
-                <a href="#services">Servicios</a>
-                <a href="#proyectos">Proyectos</a>
-                <a href="#clientes">Clientes</a>
-                <a href="#contacto">Contacto</a>
-            </nav>
-        </div>
-    </section>
+
 
     <header class="hero">
+        <section class="header-barra">
+            <div class="contenedorHeader">
+                <div class="logo">
+                    ¡EDesign!
+                </div>
+                <div class="boton">
+                    <label for="btn-menu"><i class="fa-solid fa-bars"></i></label>
+                </div>
+                <input type="checkbox" id="btn-menu">
+                <nav class="menu">
+                    <a href="#services">Servicios</a>
+                    <a href="#proyectos">Proyectos</a>
+                    <a href="#clientes">Clientes</a>
+                    <a href="#contacto">Contacto</a>
+                </nav>
+            </div>
+        </section>
+
         <section class="container hero__main">
             <div class="hero__textos">
                 <h1 class="title">
                     La mejor <span class="title--active">Experiencia Digital.</span>
                 </h1>
                 <p class="copy">
-                    Nos encargamos de llevar tu idea al<span class="copy__active">siguiente nivel</span>
+                    Nos encargamos de llevar tu idea al<span class="copy__active"> siguiente nivel</span>
                 </p>
                 <a href="#" class="cta">Agenda una demo</a>
             </div>
@@ -52,6 +54,68 @@
 
     <main>
         <section id="services" class="services">
+            <div class="tarjeta__container">
+                <div class="papa__tarjeta">
+                    <div class="tarjeta">
+                        <div class="frente__tarjeta" style="background-image:url(img/web04.png);">
+                            <div class="bg"></div>
+                            <div class="cuerpo__tarjeta_frente">
+                                <h3>Brindo el servicio de Diseño Web, te adapto la pagina a tus necesidades</h3>
+                            </div>
+                        </div>
+                        <div class="dorso__tarjeta">
+                            <div class="cuerpo__tarjeta_dorso">
+                                <h3>Diseño Web</h3>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem laboriosam iure
+                                    impedit repudiandae quos saepe, dolor ipsa officiis. Eveniet fugiat laudantium
+                                    dolores, perferendis culpa aperiam reprehenderit nobis excepturi saepe dignissimos.
+                                </p>
+                                <input type="button" value="Ver Más">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="papa__tarjeta">
+                    <div class="tarjeta">
+                        <div class="frente__tarjeta" style="background-image:url(img/web06.jpg);">
+                            <div class="bg"></div>
+                            <div class="cuerpo__tarjeta_frente">
+                                <h3>Te posiciono el sitio entre los mejores, compitiendo en el mercado de la mejor manera</h3>
+                            </div>
+                        </div>
+                        <div class="dorso__tarjeta">
+                            <div class="cuerpo__tarjeta_dorso">
+                                <h3>SEO Posicionamiento</h3>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem laboriosam iure
+                                    impedit repudiandae quos saepe, dolor ipsa officiis. Eveniet fugiat laudantium
+                                    dolores, perferendis culpa aperiam reprehenderit nobis excepturi saepe dignissimos.
+                                </p>
+                                <input type="button" value="Ver Más">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="papa__tarjeta">
+                    <div class="tarjeta">
+                        <div class="frente__tarjeta" style="background-image:url(img/web05.jpg);">
+                            <div class="bg"></div>
+                            <div class="cuerpo__tarjeta_frente">
+                                <h3>Te gestiono tus redes sociales ofreciendote el servicio de Community Manager</h3>
+                            </div>
+                        </div>
+                        <div class="dorso__tarjeta">
+                            <div class="cuerpo__tarjeta_dorso">
+                                <h3>Redes Sociales</h3>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem laboriosam iure
+                                    impedit repudiandae quos saepe, dolor ipsa officiis. Eveniet fugiat laudantium
+                                    dolores, perferendis culpa aperiam reprehenderit nobis excepturi saepe dignissimos.
+                                </p>
+                                <input type="button" value="Ver Más">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="container">
                 <h2 class="subtitle">
                     Nuestros Servicios <span class="point">.</span>
@@ -134,7 +198,7 @@
             </article>
             <h1>Porfolio</h1>
             <span class="linea"></span>
-            <section class="galeria">
+            <section id="porfolio" class="galeria">
                 <a href="#image1">
                     <img src="img/1.jpg" alt="">
                 </a>
@@ -154,12 +218,47 @@
                     <img src="img/6.jpg" alt="">
                 </a>
             </section>
-            <article class="light-box" id="image1">
-                <a href="" class="next">
-                <img src="img/1.jpg" alt="">
-            </a>
-                <a href="" class="next"></a>
 
+            <article class="light-box" id="image1">
+                <a href="#image6" class="next"><i class="fas fa-arrow-left"></i></a>
+                <img src="img/1.jpg" alt="">
+                <a href="#image2" class="next"><i class="fas fa-arrow-right"></i></a>
+                <a href="#porfolio" class="close">X</a>
+            </article>
+
+            <article class="light-box" id="image2">
+                <a href="#image1" class="next"><i class="fas fa-arrow-left"></i></a>
+                <img src="img/2.jpg" alt="">
+                <a href="#image3" class="next"><i class="fas fa-arrow-right"></i></a>
+                <a href="#porfolio" class="close">X</a>
+            </article>
+
+            <article class="light-box" id="image3">
+                <a href="#image2" class="next"><i class="fas fa-arrow-left"></i></a>
+                <img src="img/3.jpg" alt="">
+                <a href="#image4" class="next"><i class="fas fa-arrow-right"></i></a>
+                <a href="#porfolio" class="close">X</a>
+            </article>
+
+            <article class="light-box" id="image4">
+                <a href="#image3" class="next"><i class="fas fa-arrow-left"></i></a>
+                <img src="img/4.jpg" alt="">
+                <a href="#image5" class="next"><i class="fas fa-arrow-right"></i></a>
+                <a href="#porfolio" class="close">X</a>
+            </article>
+
+            <article class="light-box" id="image5">
+                <a href="#image4" class="next"><i class="fas fa-arrow-left"></i></a>
+                <img src="img/5.jpg" alt="">
+                <a href="#image6" class="next"><i class="fas fa-arrow-right"></i></a>
+                <a href="#porfolio" class="close">X</a>
+            </article>
+
+            <article class="light-box" id="image6">
+                <a href="#image5" class="next"><i class="fas fa-arrow-left"></i></a>
+                <img src="img/6.jpg" alt="">
+                <a href="#image1" class="next"><i class="fas fa-arrow-right"></i></a>
+                <a href="#porfolio" class="close">X</a>
             </article>
         </section>
 
