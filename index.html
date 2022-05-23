@@ -46,8 +46,26 @@
                 <p class="copy">
                     Nos encargamos de llevar tu idea al<span class="copy__active"> siguiente nivel</span>
                 </p>
-                <a href="#" class="cta">Agenda una demo</a>
+                <div class="contenedor">
+                <button id="btn-abrir-popup" class="btn-abrir-popup">Agendar una demo</button>
             </div>
+            </div>
+
+            <div class="overlay" id="overlay">
+                <div class="popup" id="popup">
+                    <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                    <h3>Agenda una demo</h3>
+                    <h4>y recibe un cupon de descuento.</h4>
+                    <form action="">
+                        <div class="contenedor-inputs">
+                            <input type="text" placeholder="Nombre">
+                            <input type="email" placeholder="Correo">
+                        </div>
+                        <input type="submit" class="btn-submit" value="Suscribirse">
+                    </form>
+                </div>
+            
+        </div>
             <img src="img/mockup.jpg" class="mockup" alt="" />
         </section>
     </header>
@@ -419,7 +437,7 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
     <a href="#" class="subir"><i class="fa-solid fa-circle-up"></i></a>
-
+    <script src="popup.js"></script>
 </body>
 
 </html>
