@@ -446,7 +446,7 @@ html {
   font-size: 56px;
   font-weight: 300;
   color: #fff;
-  
+
 }
 
 .title--active {
@@ -454,7 +454,7 @@ html {
   font-weight: 700;
   animation: alternate-reverse;
   -webkit-animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	        animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 /* ----------------------------------------------
@@ -469,35 +469,40 @@ html {
  * animation tracking-in-contract-bck
  * ----------------------------------------
  */
- @-webkit-keyframes tracking-in-contract-bck {
+@-webkit-keyframes tracking-in-contract-bck {
   0% {
     letter-spacing: 1em;
     -webkit-transform: translateZ(400px);
-            transform: translateZ(400px);
+    transform: translateZ(400px);
     opacity: 0;
   }
+
   40% {
     opacity: 0.6;
   }
+
   100% {
     -webkit-transform: translateZ(0);
-            transform: translateZ(0);
+    transform: translateZ(0);
     opacity: 1;
   }
 }
+
 @keyframes tracking-in-contract-bck {
   0% {
     letter-spacing: 1em;
     -webkit-transform: translateZ(400px);
-            transform: translateZ(400px);
+    transform: translateZ(400px);
     opacity: 0;
   }
+
   40% {
     opacity: 0.6;
   }
+
   100% {
     -webkit-transform: translateZ(0);
-            transform: translateZ(0);
+    transform: translateZ(0);
     opacity: 1;
   }
 }
@@ -864,22 +869,24 @@ h1 {
 
 /*** ESTILOS BOTÓN SLIDE TOP ***/
 .ov-btn-slide-top {
-  background: #fff; 
+  background: #fff;
   color: var(--black1);
-  border: 2px solid var(--gold1); 
+  border: 2px solid var(--gold1);
   padding: 12px 0px;
-  border-radius: 6px; 
+  border-radius: 6px;
   position: relative;
   z-index: 1;
   overflow: hidden;
   display: block;
   font-weight: 700;
   text-align: center;
-  }
-  .ov-btn-slide-top:hover {
-    color: var(--black1); 
-  }
-  .ov-btn-slide-top::after {
+}
+
+.ov-btn-slide-top:hover {
+  color: var(--black1);
+}
+
+.ov-btn-slide-top::after {
   content: "";
   background: linear-gradient(180deg, #f7ce90, #f4bd76 100%);
   font-weight: 700;
@@ -894,16 +901,16 @@ h1 {
   bottom: 100%;
   -webkit-transition: all 0.35s;
   transition: all 0.35s;
-  }
-  
-  .ov-btn-slide-top:hover::after {
+}
+
+.ov-btn-slide-top:hover::after {
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   -webkit-transition: all 0.35s;
   transition: all 0.35s;
-  }
+}
 
 .card {
   width: 30%;
